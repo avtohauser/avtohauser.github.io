@@ -2,6 +2,43 @@
 
 /* Основные стили */
 
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content {
+    display: none;
+}
+
+.fade-out {
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
 body {
     font-family: 'MuseoModerno';font-size 
     margin: 0;
@@ -99,6 +136,7 @@ header {
     display: flex;
     gap: 10px;
     align-items: center;
+    left: auto;
 }
 
 .theme-switcher input[type="radio"] {

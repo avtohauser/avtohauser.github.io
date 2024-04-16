@@ -1,3 +1,15 @@
+
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        var preloader = document.getElementById('preloader');
+        preloader.classList.add('fade-out');
+        setTimeout(function() {
+            preloader.style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        }, 550); // время анимации исчезновения
+    }, 2600); // время показа прелоадера
+});
+
 // Активировать темную тему при загрузке страницы
 toggleTheme('dark');
 
